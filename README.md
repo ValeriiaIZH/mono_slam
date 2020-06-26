@@ -13,5 +13,5 @@ matplotlib,
 numpy,
 skimage.
 
-RUN
+# RUN
 python3 main.py
