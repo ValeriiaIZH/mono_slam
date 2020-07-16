@@ -1,6 +1,6 @@
 # mono_slam
 python3
-Ubunty 18.04
+Ubuntu 18.04
 
 install this libraries:
 
