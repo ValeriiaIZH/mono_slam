@@ -99,3 +99,18 @@ class dim3display(object):
 
 		# add to queue
 		self.data.put((np.array(poses), np.array(points3D)))
+	def features3D(self, frames, points):
+		# add points and poses to be displayed
+		poses = []
+		points3D = []
+		for f in frames:
+			# invert pose for display only
+			poses.append(np.linalg.inv(f.pose))
+
+		for ptset in points:
+			for pt in ptset:
+				points3D.append(pt[:3])
+		p3D = np.array(points3D)
+		# add to queue
+		self.data.put((np.array(poses), np.array(points3D)))
+		return p3D
